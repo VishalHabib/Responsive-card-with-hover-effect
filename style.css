@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+
+
+body {
+    margin: 0;
+    height: 100vh;
+    background: black;
+    flex-direction: column;
+    font-family: 'Raleway', sans-serif;
+}
+
+h1{
+    text-align: center;
+    margin-top: 20px;
+}
+
+p{
+    margin-top: -10px;
+    text-align:center;
+    line-height: 0.4cm;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons{
+    flex-direction: row;
+    gap: 20px;
+    margin: 20px;
+}
+
+.icon{
+    font-size: 1.7rem;
+    margin: 2px;
+}
+
+.icon:hover{
+    transform: rotate(90deg) scale(1.1);
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    color: rgba(170, 35, 35, 0.8);
+}
+
+.card {
+    width: 400px;
+    height: 300px;
+    background-color: white;
+    border-radius: 15px;
+    flex-direction: column;
+
+    >  .prof-img  {
+        > .hide { 
+            display: none;
+        }
+    }
+}
+
+.prof-img{
+    position: relative;
+    top:-50;
+    width:200px;
+    height: 200px;
+    border-radius: 100%;
+    > img {
+        width: 100%;
+        height: 100%;
+        border-radius: 100%;
+        margin-top: 20px;
+    }
+}
+
+.card:hover{
+    transition: 0.5s ease-in-out;
+    height: 600px;
+    cursor: pointer;
+    > .prof-img {
+        top: -200;
+        transition: 0.5s ease-in-out;
+    }
+    > .prof-img {
+        > .hide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        animation: forwards fadein 1.5s ease-in-out;
+        }
+    }
+}
+
+
+.more{
+    padding: 10px;
+    margin-top: 10px;
+    background: rgb(221, 93, 93);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    width: 100px;
+}
+
+.more:hover{
+    cursor: pointer;
+    background: rgba(170, 35, 35, 0.8);
+    transform: scale(1.1);
+    transition: 0.5s ease-in-out;
+}
+
+
+@keyframes fadein {
+    from{
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+a{
+    color: black;
+    text-decoration: none;
+}
